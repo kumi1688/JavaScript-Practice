@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <body>
+    <ul style="cursor:pointer">
+      <li>클릭하면 0</li>
+      <li>클릭하면 1</li>
+      <li>클릭하면 2</li>
+    </ul>
+  </body>
+  <script>
+    const items = document.querySelectorAll("li");
+    for (var i = 0; i < items.length; i++) {
+      items[i].addEventListener("click", () => {
+        alert(i);
+      });
+    }
+    // 클릭하면 모두 똑같이 3으로 반응한다
+    // var로 할당한 변수는 함수 유효 범위를 따른다.
+    // 즉 함수 내에서 마지막으로 할당한 값을 참조한다
+  </script>
+</html>
