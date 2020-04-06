@@ -6,6 +6,16 @@
 // 2. 어떤 상품이 할인 중이고 재고가 있다면 할인 가격을 반환
 // 3. 어떤 상품이 할인 중이 아니거나 할인 중이라도 할인 상품의 재고가 없다면 정상 가격을 반환
 
+function getLowestPrice(item) {
+  let count = item.inventory;
+  let price = item.price;
+  if (item.salePrice) {
+    let count = item.saleInventory;
+    if (count > 0) price = item.salePrice;
+  }
+  if (count) return price;
+  return 0;
+}
 // 다음은 테스트 케이스
 // 0을 반환
 const item1 = {
