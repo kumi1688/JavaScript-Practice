@@ -18,6 +18,15 @@ const employee2 = Object.assign({}, defaultEmployee, {
   name: Object.assign({}, defaultEmployee.name),
 });
 
+// 객체 펼침 연산자로 해결
+const employee3 = {
+  ...defaultEmployee,
+  name: {
+    ...defaultEmployee.name,
+  },
+};
+
 employee2.name.first = "kang";
 console.log(employee2);
+console.log(employee3);
 console.log(defaultEmployee);
